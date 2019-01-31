@@ -1,5 +1,6 @@
 nodes = [
-  { hostname: 'esxi-670', box: 'vmware/esxi'}
+  { hostname: 'esxi-670', box: 'vmware/esxi', version: '6.7.0-8169922'},
+  { hostname: 'esxi-650', box: 'vmware/esxi', version: '6.5.0-8294253'}
 ]
 
 Vagrant.configure("2") do |config|
@@ -7,6 +8,7 @@ Vagrant.configure("2") do |config|
     config.vm.define node[:hostname] do |node_config|
       node_config.vm.hostname = node[:hostname]
       node_config.vm.box = node[:box]
+      node_config.vm.box_version = node[:version]
     end
   end
   config.vm.provider :vmware_desktop do |domain|
