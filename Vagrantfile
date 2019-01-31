@@ -1,6 +1,7 @@
 nodes = [
   { hostname: 'esxi-670', box: 'vmware/esxi', version: '6.7.0-8169922'},
-  { hostname: 'esxi-650', box: 'vmware/esxi', version: '6.5.0-8294253'}
+  { hostname: 'esxi-650', box: 'vmware/esxi', version: '6.5.0-8294253'},
+  { hostname: 'photon-2', box: 'vmware/photon', version: '2.0.0'}
 ]
 
 Vagrant.configure("2") do |config|
